@@ -585,8 +585,8 @@ enum lime_logger_level {
   LIME_LOGGER_LEVEL_FATAL,
   LIME_LOGGER_LEVEL_ERROR,
   LIME_LOGGER_LEVEL_ALERT,
-  LIME_LOGGER_LEVEL_INFO,
   LIME_LOGGER_LEVEL_NOTE,
+  LIME_LOGGER_LEVEL_INFO,
   LIME_LOGGER_LEVEL_HINT,
   LIME_LOGGER_LEVEL_DEBUG,
   LIME_LOGGER_LEVEL_TRACE,
@@ -628,8 +628,8 @@ lime_logger_log (
 #   define lime_logger_log_fatal(self, prompt, ...) lime_logger_log((self), (prompt), LIME_LOGGER_LEVEL_FATAL, __VA_ARGS__)
 #   define lime_logger_log_error(self, prompt, ...) lime_logger_log((self), (prompt), LIME_LOGGER_LEVEL_ERROR, __VA_ARGS__)
 #   define lime_logger_log_alert(self, prompt, ...) lime_logger_log((self), (prompt), LIME_LOGGER_LEVEL_ALERT, __VA_ARGS__)
-#   define lime_logger_log_note(self, prompt, ...)  lime_logger_log((self), (prompt), LIME_LOGGER_LEVEL_INFO,  __VA_ARGS__)
-#   define lime_logger_log_info(self, prompt, ...)  lime_logger_log((self), (prompt), LIME_LOGGER_LEVEL_NOTE,  __VA_ARGS__)
+#   define lime_logger_log_note(self, prompt, ...)  lime_logger_log((self), (prompt), LIME_LOGGER_LEVEL_NOTE,  __VA_ARGS__)
+#   define lime_logger_log_info(self, prompt, ...)  lime_logger_log((self), (prompt), LIME_LOGGER_LEVEL_INFO,  __VA_ARGS__)
 #   define lime_logger_log_hint(self, prompt, ...)  lime_logger_log((self), (prompt), LIME_LOGGER_LEVEL_HINT,  __VA_ARGS__)
 
 #   if defined(__LIME_DEBUG__)

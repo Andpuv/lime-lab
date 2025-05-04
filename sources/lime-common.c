@@ -189,8 +189,8 @@ logger_valog (
     [ LIME_LOGGER_LEVEL_FATAL ] = "FATAL",
     [ LIME_LOGGER_LEVEL_ERROR ] = "ERROR",
     [ LIME_LOGGER_LEVEL_ALERT ] = "ALERT",
-    [ LIME_LOGGER_LEVEL_INFO  ] = "INFO ",
     [ LIME_LOGGER_LEVEL_NOTE  ] = "NOTE ",
+    [ LIME_LOGGER_LEVEL_INFO  ] = "INFO ",
     [ LIME_LOGGER_LEVEL_HINT  ] = "HINT ",
     [ LIME_LOGGER_LEVEL_DEBUG ] = "DEBUG",
     [ LIME_LOGGER_LEVEL_TRACE ] = "TRACE"
@@ -214,6 +214,7 @@ logger_valog (
     "\n"
   );
   lime_assert_rt(0 != result);
+  fflush(self->file);
 
   LIME_VOID(result);
   return is_fatal;
